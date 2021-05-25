@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="parent-container">
+
+
+    <div class="category-heading-text">
+        <h1>Please Select Your House</h1>
+    </div>
+    
+    <div class="parent-category-class">
+
+
+        {% for parent in parent_category %}
+        <a href="{% url 'sub_category' parent.id %}" class="category-item wow bounceInRight">
+            <img src="{{ parent.image.url }}">
+            <div class="parent-centered wow flip" data-wow-delay="1s">
+                <strong>{{ parent.parent_name }}</strong>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

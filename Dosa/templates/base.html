@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+	<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+	<link rel="stylesheet" href="{% static 'css/button.css' %}">
+	<link rel="stylesheet" href="{% static 'css/tagline.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/form.css' %}">
+	<link rel="stylesheet" href="{% static 'css/about.css' %}">
+   <!-- <link rel="stylesheet" media="screen and (max-width: 600px)" type="text/css" href="{% static 'css/mobile.css' %}">-->
+</head>
+<body>
+    
+	<nav>
+    <input type="checkbox" id="res-menu">
+    <label for="res-menu">
+      <i class="fa fa-bars" id="sign-one"></i>
+      <i class="fa fa-times" id="sign-two"></i>
+    </label>
+    <h1><a href="{% url 'home' %}" style="color: white;">Hogwarts</h1>
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'parent_category' %}">Product</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+  </nav>
+
+	
+    {% block content %}
+    {% endblock %}
+	
+   <footer class= "footer">
+      <div class="footer-left">
+        <img src="">
+        <p>This is a cool looking footer with a cool background color looks really greate and works perfectly</p>
+        <div class= "social">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-whatsapp"></i></a>
+          <a href="#"><i class="fa fa-tumblr"></i></a>
+       </div>
+    </div>
+    <ul class="footer-right">
+      <li>
+        <h2>Product</h2>
+
+        <ul class="box">
+           <li><a href="#">Theme Design</a></li>
+           <li><a href="#">Theme Design</a></li>
+           <li><a href="#">Theme Design</a></li>
+           <li><a href="#">Theme Design</a></li>
+           <li><a href="#">Theme Design</a></li>
+       </ul>
+     </li>
+
+      <li class="features">
+        <h2>Useful Links</h2>
+
+        <ul class="box">
+           <li><a href="#">Pricing</a></li>
+           <li><a href="#">Blog</a></li>
+           <li><a href="#">Design</a></li>
+           <li><a href="#">Scheme</a></li>
+           <li><a href="#">Lucky</a></li>
+       </ul>
+     </li>
+
+       <li>
+        <h2>Address</h2>
+
+        <ul class="box">
+           <li><a href="#">127, West Land</a></li>
+           <li><a href="#">Hogwarts Express</a></li>
+           <li><a href="#">9-3/4 platform</a></li>
+           <li><a href="#">Kings Cross station</a></li>
+           <li><a href="#">Palo Alto</a></li>
+       </ul>
+     </li>
+   </ul>
+     <div class="footer-bottom">
+       <p>All rights reserved by &copy; naman 2020</p>
+     </div>
+ </footer>
+   
+   
+</body>
+
+</html>

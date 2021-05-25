@@ -1,0 +1,33 @@
+
+.tagline{
+  background-size:contain;
+  justify-content: center;
+  align-items:center;
+  background-color: #fff;
+  background-image: url( '/static/Images/c49a207e0f89c9290d98fd43a87a8cb0.gif' );
+  height: 300px;
+}
+
+.tagline1{
+    background-size:contain;
+  justify-content: center;
+  align-items:center;
+  background-color: #fff;
+  height: 200px;
+}
+.tagline1 h1{
+  text-align:center;
+  color: #011c39;
+ font-family: raleway;
+  font-size: 3rem;
+   padding: 6rem 0;
+}
+
+
+.tagline h1{
+  text-align:center;
+  color: #011c39;
+ font-family: raleway;
+  font-size: 3rem;
+   padding: 6rem 0;
+}

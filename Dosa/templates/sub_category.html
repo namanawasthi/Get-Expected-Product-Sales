@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+	<div class="category-heading-text">
+        <h1>Please Make Your Choice</h1>
+    </div>
+    
+	<div class="sub-category-class">
+
+
+		{% for sub in sub_category %}
+
+		<a href="{% url 'product' sub.id %}" class="sub-category-item">
+			<img src="{{ sub.image.url }}">
+			<div class="centered">
+				<strong>{{ sub.sub_name }}</strong>
+			</div>
+		</a>
+				
+		{% endfor %}
+
+
+	</div>
+</div>
+
+
+
+ {% endblock content %}

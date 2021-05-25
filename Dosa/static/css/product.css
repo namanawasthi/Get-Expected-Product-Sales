@@ -1,0 +1,17 @@
+.parent-container {
+    max-width: 1100px;
+    margin: auto auto;
+    padding: auto auto;
+}
+
+
+
+.parent-category-class {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 4.5rem auto;
+    align-content: center;
+    justify-content: center;
+
+}

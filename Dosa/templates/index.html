@@ -1,0 +1,56 @@
+<!-- add to the <body> of your page-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!--Banner-->
+  <div class="banner-area">
+    <div class="banner-text">
+      <h2>''World of Magic and Spells''</h2>
+    </div>
+  </div>
+<!--Banner-->
+
+<!--button-->
+          <div class="index_button"><a style="color: white; "href="{% url 'parent_category' %}"><button>Let's Go</button></a></div>
+<!--button-END-->
+
+<!--Tagline-->
+<div class="tagline">
+    <h1 class="wow tada" data-wow-delay="1s" data-wow-duration="1s" data-wow-iteration="3">
+     ''Wizards Exclusive Delivery''
+    </h1>
+</div>
+<!--Tagline-->
+
+<div class="tagline1">
+    <h1 class="wow tada" data-wow-delay="1s" data-wow-duration="1s" data-wow-iteration="3">
+     ''Quidditch Special''
+    </h1>
+</div>
+
+<!-- Quidditch Special Container-->
+<div class="container">
+	<div class="sub-category-class">
+
+		{% for prod in product %}
+		<a href="{% url 'product_detail' prod.id %}" class="sub-category-item">
+			<img src="{{ prod.image.url }}">
+			<div class="centered">
+				<strong>{{ prod.name }}</strong>
+			</div>
+		</a>
+		{% endfor %}
+	</div>
+</div>
+<!-- Quidditch Special Container END-->
+
+
+<div class="tagline1">
+    <h1 class="wow tada" data-wow-delay="1s" data-wow-duration="1s" data-wow-iteration="3">
+     ''Dementors Build Quality''
+    </h1>
+</div>
+
+{% endblock content %}

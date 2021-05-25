@@ -1,0 +1,43 @@
+.form-control {
+        margin: .5rem 0;
+    }
+
+.form_text{
+    color: #011c39;
+    font-weight: bold;
+}
+
+.form-center{
+    margin-top: 15rem;
+}
+
+    .form-control select {
+        width: 100%;
+        font-size: 1.2rem;
+        text-align-last:center;
+    }
+
+    .form-control input {
+        padding: 1rem 1rem;
+        font-family: raleway;
+        width: 100%;
+        border-style: none;
+        font-size: 0.9rem;
+        background-color: #011c39;
+        color: white;
+        font-weight: bold;
+        font-weight: bold;
+        box-shadow: 5px 5px 10px grey;
+    }
+
+    .form-control input:hover {
+        padding: 1rem 1rem;
+        font-family: raleway;
+        width: 100%;
+        border-style: none;
+        font-size: 0.9rem;
+        color: #011c39;
+        background-color: white;
+        font-weight: bold;
+        box-shadow: 2px 2px 16px 2px #011c39;
+    

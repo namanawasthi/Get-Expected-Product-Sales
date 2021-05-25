@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style type="text/css">
+	
+	body{
+		<!--background-image: url('{{ product_detail.background_image.url }}');-->
+		background-color: white;
+		background-position: cover;
+		background-repeat: no-repeat; 
+	}
+</style>
+
+<div class="container-fluid">
+    <div class="product_detail">
+        
+    <div class="product-detail-all">
+        <div class="multiple-product-images" style="overflow-y: auto;">
+            <div class="product-image-div">
+                <img class="product-detail-image-1" src="{{ product_detail.image.url }}">
+            </div>
+            <div class="product-image-div">
+                <img class="product-detail-image-1" src="{{ product_detail.image.url }}">
+            </div>
+            <div class="product-image-div">
+                <img class="product-detail-image-1" src="{{ product_detail.image.url }}">
+            </div>
+            <div class="product-image-div">
+                <img class="product-detail-image-1" src="{{ product_detail.image.url }}">
+            </div>
+            
+        </div>
+      <div class="product-image-div-1">
+                <img class="product-detail-image" src="{{ product_detail.image.url }}">
+                <h1>{{ product_detail.name }}</h1>
+        </div>
+          
+<div class="product-detail-table">
+                <table class="details">
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td class="detail-heading">Type</td>
+                        <td>{{ product_detail.Type }}</td>
+                    <tr>
+                        <td class="detail-heading">Price</td>
+                        <td>
+                            {{ product_detail.price }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="detail-heading">Size/Weight</td>
+                        <td>{{ product_detail.size_or_weight }}</td>
+                    </tr>
+                    <tr>
+                        <td class="detail-heading">MOQ</td>
+                        <td>{{ product_detail.MOQ }}</td>
+                    </tr>
+                    <tr>
+                        <td class="detail-heading">Box Dimension</td>
+                        <td>{{ product_detail.box_dimension }}</td>
+                    </tr>
+                    <tr>
+                        <td class="detail-heading">Packaging</td>
+                        <td>{{ product_detail.Packaging }}</td>
+                    </tr>
+                    <tr>
+                        <td class="detail-heading">Availability</td>
+                        <td>{{ product_detail.Availability }}</td>
+                    </tr>
+                </table>
+            </div>
+          
+    </div>
+
+    
+	</div>
+        
+            <div class="voting_form">
+                <form method="POST">
+                    {% if messages %}
+                    <div class="alert alert-success" role="alert">
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li class="{{ message.tags }} messages_display">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    {% csrf_token %}
+                    {% if not messages %}
+                    <input type="text" hidden name="product_id" value="{{ product_detail.id }}">
+                <div class="form-center">
+                    <legend class="form_text">
+                        Will you buy this product?
+                    </legend>
+                    <div class="form-control">
+                        <select name="voting" id="voting" required>
+                            <option value="Yes" default>Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <input type="submit" value="Send FeedBack">
+                    </div>
+                </div>
+                    {% endif %}
+                </form>
+            </div>
+    </div>
+	
+
+{% endblock content %}
